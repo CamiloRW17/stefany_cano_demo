@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephany Cano | Arquitectura & Diseño</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'archi-dark': '#1a1a1a',
+                        'archi-gray': '#f4f4f4',
+                        'archi-gold': '#d4af37', // Un toque sutil dorado
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Ocultar elementos para la animación de entrada */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Efecto sutil en imágenes */
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+  <script type="module" crossorigin src="/stefany_cano_demo/assets/index-DBLh-x61.js"></script>
+  <link rel="stylesheet" crossorigin href="/stefany_cano_demo/assets/index-Dv3TwjFn.css">
+</head>
+<body class="text-archi-dark bg-white antialiased">
+
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100 py-4 transition-all" id="navbar">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="font-serif text-2xl tracking-widest font-semibold uppercase">
+                Stephany <span class="text-gray-500">Cano</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 text-sm tracking-widest uppercase text-gray-600">
+                <a href="#proyectos" class="hover:text-black transition">Proyectos</a>
+                <a href="#filosofia" class="hover:text-black transition">Filosofía</a>
+                <a href="#contacto" class="hover:text-black transition">Contacto</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden bg-white border-t md:hidden absolute w-full left-0">
+            <a href="#proyectos" class="block py-3 px-6 hover:bg-gray-50">Proyectos</a>
+            <a href="#filosofia" class="block py-3 px-6 hover:bg-gray-50">Filosofía</a>
+            <a href="#contacto" class="block py-3 px-6 hover:bg-gray-50">Contacto</a>
+        </div>
+    </nav>
+
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-black">
+            <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop" 
+                 alt="Arquitectura Moderna" 
+                 class="w-full h-full object-cover opacity-60">
+        </div>
+
+        <div class="relative z-10 text-center text-white px-4 reveal active">
+            <p class="text-sm md:text-base tracking-[0.3em] uppercase mb-4 text-gray-200">Arquitectura & Interiorismo</p>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl mb-6 leading-tight">
+                Diseñando <br> <span class="italic">Experiencias</span>
+            </h1>
+            <a href="#proyectos" class="inline-block border border-white px-8 py-3 text-sm tracking-widest hover:bg-white hover:text-black transition duration-300 uppercase mt-4">
+                Ver Portafolio
+            </a>
+        </div>
+    </header>
+
+    <section id="filosofia" class="py-20 md:py-32 container mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center reveal">
+            <h2 class="font-serif text-3xl md:text-4xl mb-8">Menos es más.</h2>
+            <p class="text-gray-600 leading-relaxed text-lg font-light">
+                Creo espacios donde la funcionalidad se encuentra con la estética pura. Cada línea, cada material y cada rayo de luz tiene un propósito. Mi enfoque no es solo construir edificios, sino crear atmósferas que mejoren la calidad de vida de quienes las habitan.
+            </p>
+            <div class="mt-8">
+                <img src="https://images.unsplash.com/photo-1664575602276-acd073f104c1?q=80&w=200&auto=format&fit=crop" alt="Firma" class="h-24 mx-auto object-contain opacity-70 grayscale">
+                <p class="font-serif italic mt-2 text-gray-500">- Arq. Stephany Cano</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="bg-archi-gray py-24">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-end mb-12 reveal">
+                <div>
+                    <span class="text-xs font-bold tracking-widest text-gray-500 uppercase">Portafolio</span>
+                    <h2 class="font-serif text-3xl md:text-4xl mt-2">Obras Seleccionadas</h2>
+                </div>
+                <button onclick="demoAlert()" class="hidden md:block text-sm border-b border-black pb-1 hover:text-gray-600 transition">Ver todo el archivo</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card group relative overflow-hidden cursor-pointer h-[400px] reveal" onclick="demoAlert()">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 ease-in-out" alt="Casa Residencial">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <div class="text-center text-white transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+                            <h3 class="font-serif text-2xl italic">Casa Las Lomas</h3>
+                            <p class="text-xs uppercase tracking-widest mt-2">Residencial</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card group relative overflow-hidden cursor-pointer h-[400px] reveal" onclick="demoAlert()">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 ease-in-out" alt="Interiores Oficina">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <div class="text-center text-white transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+                            <h3 class="font-serif text-2xl italic">Corporativo Hexa</h3>
+                            <p class="text-xs uppercase tracking-widest mt-2">Comercial / Interiorismo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card group relative overflow-hidden cursor-pointer h-[400px] reveal" onclick="demoAlert()">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 ease-in-out" alt="Departamento Loft">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <div class="text-center text-white transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+                            <h3 class="font-serif text-2xl italic">Loft Reforma</h3>
+                            <p class="text-xs uppercase tracking-widest mt-2">Remodelación</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center reveal">
+            <div>
+                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop" alt="Planos Arquitectónicos" class="shadow-xl grayscale hover:grayscale-0 transition duration-500">
+            </div>
+            <div>
+                <h2 class="font-serif text-3xl mb-6">Servicios de Diseño</h2>
+                <ul class="space-y-6">
+                    <li class="flex items-start">
+                        <span class="h-px w-8 bg-black mt-3 mr-4"></span>
+                        <div>
+                            <h4 class="font-bold text-lg">Proyecto Arquitectónico</h4>
+                            <p class="text-gray-500 text-sm mt-1">Desde el concepto inicial hasta los planos ejecutivos.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="h-px w-8 bg-black mt-3 mr-4"></span>
+                        <div>
+                            <h4 class="font-bold text-lg">Diseño de Interiores</h4>
+                            <p class="text-gray-500 text-sm mt-1">Selección de acabados, mobiliario e iluminación.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="h-px w-8 bg-black mt-3 mr-4"></span>
+                        <div>
+                            <h4 class="font-bold text-lg">Remodelación y Obra</h4>
+                            <p class="text-gray-500 text-sm mt-1">Supervisión y ejecución de transformaciones espaciales.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="bg-archi-dark text-white py-24">
+        <div class="container mx-auto px-6 max-w-4xl text-center reveal">
+            <p class="text-sm tracking-[0.2em] uppercase text-gray-400 mb-4">Comencemos un proyecto</p>
+            <h2 class="font-serif text-4xl md:text-5xl mb-12">¿Tienes una visión en mente?</h2>
+            
+            <form onsubmit="event.preventDefault(); demoAlert();" class="text-left space-y-8 max-w-lg mx-auto">
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Nombre</label>
+                    <input type="text" class="w-full bg-transparent border-b border-gray-700 py-2 focus:outline-none focus:border-white transition text-lg" placeholder="Tu nombre">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Correo</label>
+                    <input type="email" class="w-full bg-transparent border-b border-gray-700 py-2 focus:outline-none focus:border-white transition text-lg" placeholder="correo@ejemplo.com">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Mensaje</label>
+                    <textarea rows="3" class="w-full bg-transparent border-b border-gray-700 py-2 focus:outline-none focus:border-white transition text-lg resize-none" placeholder="Cuéntame sobre tu proyecto..."></textarea>
+                </div>
+                <div class="text-center mt-12">
+                    <button type="submit" class="bg-white text-black px-10 py-4 text-sm tracking-widest uppercase hover:bg-gray-200 transition">
+                        Enviar Consulta
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-black text-gray-600 py-8 border-t border-gray-900 text-center text-xs tracking-widest uppercase">
+        <p>&copy; 2026 Stephany Cano Arquitectura. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // 1. Lógica del Menú Móvil
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 2. Animación de "Reveal" al hacer scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+
+        // Disparar una vez al inicio por si hay elementos ya visibles
+        reveal();
+
+        // 3. LA FUNCIÓN "DEMO" (Clave para tu venta)
+        // Esta función salta cuando tocas un botón de acción.
+        function demoAlert() {
+            alert("MODO DEMOSTRACIÓN:\n\nAquí es donde esta estructura se conecta con tus herramientas:\n- Tu WhatsApp\n- Tu correo personal\n- Tu agenda\n\nEn la versión final, este botón ejecutará la acción real.");
+        }
+    </script>
+  </body>
+</html>
